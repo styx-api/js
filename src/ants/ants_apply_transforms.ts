@@ -4,7 +4,7 @@
 import { Runner, Execution, Metadata, InputPathType, OutputPathType, getGlobalRunner } from 'styxdefs';
 
 const ANTS_APPLY_TRANSFORMS_METADATA: Metadata = {
-    id: "e900efb5c61d125a4b8b98be92b7c777df8489a4.boutiques",
+    id: "b2a458e411cfbc6687dbc4a31f95f2b6ac33d716.boutiques",
     name: "antsApplyTransforms",
     package: "ants",
     container_image_tag: "antsx/ants:v2.5.3",
@@ -857,7 +857,7 @@ function ants_apply_transforms_bspline_cargs(
 ): string[] {
     const cargs: string[] = [];
     if ((params["order"] ?? null) !== null) {
-        cargs.push(["BSpline[", "order=", String((params["order"] ?? null)), "]"].join(''));
+        cargs.push(["BSpline[", String((params["order"] ?? null)), "]"].join(''));
     }
     return cargs;
 }
